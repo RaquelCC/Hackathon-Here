@@ -1,0 +1,19 @@
+{
+  "name": "hackathon-here",
+  "version": "1.0.0",
+  "description": "Proyecto hackathon final",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaquelCC/Hackathon-Here.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaquelCC/Hackathon-Here/issues"
+  },
+  "homepage": "https://github.com/RaquelCC/Hackathon-Here#readme"
+}
