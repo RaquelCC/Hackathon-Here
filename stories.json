@@ -1,0 +1,220 @@
+{
+    "stories": {
+        "a": {
+            "title": "El Angel",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+            "img": "img/elAngel.png",
+            "duration": "10 - 20 min",
+            "genre": "Fantasía",
+            "startCoordinates": {
+                "lat": "-33.44384",
+                "lng": "-70.60357119999999"
+            },
+            "chapters": {
+                "ch1": {
+                    "startCoordinates": {
+                        "lat": "-33.44384",
+                        "lng": "-70.60357119999999"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": {
+                        "choice1": {
+                            "description": "Opción 1",
+                            "chapter": "ch2"
+                        },
+                        "choice2": {
+                            "description": "Opción 2",
+                            "chapter": "ch3"
+                        }
+                    }
+                },
+                "ch2": {
+                    "startCoordinates": {
+                        "lat": "-33.4392",
+                        "lng": "-70.61482"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": {
+                        "choice1": {
+                            "description": "Opción 1",
+                            "chapter": "ch4"
+                        },
+                        "choice2": {
+                            "description": "Opción 2",
+                            "chapter": "ch5"
+                        }
+                    }
+                },
+                "ch3": {
+                    "startCoordinates": {
+                        "lat": "-33.4392",
+                        "lng": "-70.61482"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": {
+                        "choice1": {
+                            "description": "Opción 1",
+                            "chapter": "ch4"
+                        },
+                        "choice2": {
+                            "description": "Opción 2",
+                            "chapter": "ch5"
+                        }
+                    }
+                },
+                "ch4": {
+                    "startCoordinates": {
+                        "lat": "-33.4371158",
+                        "lng": "-70.6160477"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": false
+                }
+            }
+        },
+        "b": {
+            "title": "El Angel",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+            "img": "img/elAngel.png",
+            "duration": "10 - 20 min",
+            "genre": "Fantasía",
+            "startCoordinates": {
+                "lat": "-33.43233",
+                "lng": "-70.60922"
+            },
+            "chapters": {
+                "ch1": {
+                    "startCoordinates": {
+                        "lat": "-33.424646",
+                        "lng": "-70.604194"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": {
+                        "choice1": {
+                            "description": "Opción 1",
+                            "chapter": "ch2"
+                        },
+                        "choice2": {
+                            "description": "Opción 2",
+                            "chapter": "ch3"
+                        }
+                    }
+                },
+                "ch2": {
+                    "startCoordinates": {
+                        "lat": "-33.424646",
+                        "lng": "-70.604194"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": {
+                        "choice1": {
+                            "description": "Opción 1",
+                            "chapter": "ch4"
+                        },
+                        "choice2": {
+                            "description": "Opción 2",
+                            "chapter": "ch5"
+                        }
+                    }
+                },
+                "ch3": {
+                    "startCoordinates": {
+                        "lat": "-33.4282796",
+                        "lng": "-70.6011522"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": {
+                        "choice1": {
+                            "description": "Opción 1",
+                            "chapter": "ch4"
+                        },
+                        "choice2": {
+                            "description": "Opción 2",
+                            "chapter": "ch5"
+                        }
+                    }
+                },
+                "ch4": {
+                    "startCoordinates": {
+                        "lat": "-33.43431",
+                        "lng": "-70.60085"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": false
+                }
+            }
+        },
+        "c": {
+            "title": "El Angel",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+            "img": "img/elAngel.png",
+            "duration": "10 - 20 min",
+            "genre": "Fantasía",
+            "startCoordinates": {
+                "lat": "-33.41915",
+                "lng": "-70.6418"
+            },
+            "chapters": {
+                "ch1": {
+                    "startCoordinates": {
+                        "lat": "-33.424646",
+                        "lng": "-70.604194"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": {
+                        "choice1": {
+                            "description": "Opción 1",
+                            "chapter": "ch2"
+                        },
+                        "choice2": {
+                            "description": "Opción 2",
+                            "chapter": "ch3"
+                        }
+                    }
+                },
+                "ch2": {
+                    "startCoordinates": {
+                        "lat": "-33.424646",
+                        "lng": "-70.604194"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": {
+                        "choice1": {
+                            "description": "Opción 1",
+                            "chapter": "ch4"
+                        },
+                        "choice2": {
+                            "description": "Opción 2",
+                            "chapter": "ch5"
+                        }
+                    }
+                },
+                "ch3": {
+                    "startCoordinates": {
+                        "lat": "-33.4282796",
+                        "lng": "-70.6011522"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": {
+                        "choice1": {
+                            "description": "Opción 1",
+                            "chapter": "ch4"
+                        },
+                        "choice2": {
+                            "description": "Opción 2",
+                            "chapter": "ch5"
+                        }
+                    }
+                },
+                "ch4": {
+                    "startCoordinates": {
+                        "lat": "-33.43431",
+                        "lng": "-70.60085"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "nextChapter": false
+                }
+            }
+        }
+    }
+}
