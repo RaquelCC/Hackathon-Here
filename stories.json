@@ -12,6 +12,8 @@
             },
             "chapters": {
                 "ch1": {
+                    "numero": 1,
+                    "title": "Capitulo 1",
                     "startCoordinates": {
                         "lat": "-33.44384",
                         "lng": "-70.60357119999999"
@@ -29,6 +31,8 @@
                     }
                 },
                 "ch2": {
+                    "numero": 2,
+                    "title": "Capitulo 2",
                     "startCoordinates": {
                         "lat": "-33.4392",
                         "lng": "-70.61482"
@@ -46,6 +50,8 @@
                     }
                 },
                 "ch3": {
+                    "numero": 3,
+                    "title": "Capitulo 3",
                     "startCoordinates": {
                         "lat": "-33.4392",
                         "lng": "-70.61482"
@@ -63,6 +69,8 @@
                     }
                 },
                 "ch4": {
+                    "numero": 4,
+                    "title": "Capitulo 4",
                     "startCoordinates": {
                         "lat": "-33.4371158",
                         "lng": "-70.6160477"
@@ -84,6 +92,8 @@
             },
             "chapters": {
                 "ch1": {
+                    "numero": 1,
+                    "title": "Capitulo 1",
                     "startCoordinates": {
                         "lat": "-33.424646",
                         "lng": "-70.604194"
@@ -101,6 +111,8 @@
                     }
                 },
                 "ch2": {
+                    "numero": 2,
+                    "title": "Capitulo 2",
                     "startCoordinates": {
                         "lat": "-33.424646",
                         "lng": "-70.604194"
@@ -118,6 +130,8 @@
                     }
                 },
                 "ch3": {
+                    "numero": 3,
+                    "title": "Capitulo 3",
                     "startCoordinates": {
                         "lat": "-33.4282796",
                         "lng": "-70.6011522"
@@ -135,6 +149,8 @@
                     }
                 },
                 "ch4": {
+                    "numero": 4,
+                    "title": "Capitulo 4",
                     "startCoordinates": {
                         "lat": "-33.43431",
                         "lng": "-70.60085"
@@ -156,6 +172,8 @@
             },
             "chapters": {
                 "ch1": {
+                    "numero": 1,
+                    "title": "Capitulo 1",
                     "startCoordinates": {
                         "lat": "-33.424646",
                         "lng": "-70.604194"
@@ -173,6 +191,8 @@
                     }
                 },
                 "ch2": {
+                    "numero": 2,
+                    "title": "Capitulo 2",
                     "startCoordinates": {
                         "lat": "-33.424646",
                         "lng": "-70.604194"
@@ -190,6 +210,8 @@
                     }
                 },
                 "ch3": {
+                    "numero": 3,
+                    "title": "Capitulo 3",
                     "startCoordinates": {
                         "lat": "-33.4282796",
                         "lng": "-70.6011522"
@@ -207,6 +229,8 @@
                     }
                 },
                 "ch4": {
+                    "numero": 4,
+                    "title": "Capitulo 4",
                     "startCoordinates": {
                         "lat": "-33.43431",
                         "lng": "-70.60085"
