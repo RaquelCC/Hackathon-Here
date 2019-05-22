@@ -107,3 +107,12 @@ html, body, #r-root {
     line-height: 20px;
     margin-top: 28px;
 }
+
+#r-right-arrow, #r-left-arrow {
+    position: absolute;
+    top: 339px;
+}
+
+#r-right-arrow {
+    right: 0;
+}

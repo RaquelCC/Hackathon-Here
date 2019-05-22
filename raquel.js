@@ -66,6 +66,8 @@ if (navigator.geolocation) {
 
 
 // filtrar historias que esten cerca del usuario
+function getMeAStory(indice) {
+
 let stories;
 function getStories() {
     return new Promise((res, rej) => {
@@ -116,7 +118,7 @@ getStories()
     .then(data => {
         console.log(data)
         let filtered = data.filter(story => {
-            return story.distance <= 2000
+            return story/*.distance <= 2000*/
         })
         return filtered.sort((a, b) => {
             return a.distance - b.distance
@@ -125,21 +127,43 @@ getStories()
     .then(data => {
         console.log(data)
         let icon = new H.map.Icon('img/marker.png');
-        let marker = new H.map.Marker({ lat: data[0].startCoordinates.lat, lng: data[0].startCoordinates.lng }, { icon: icon });
+        let marker = new H.map.Marker({ lat: data[indice].startCoordinates.lat, lng: data[indice].startCoordinates.lng }, { icon: icon });
         map.addObject(marker);
         document.getElementById("r-story").innerHTML = `
-        <div id="r-button">A ${data[0].time} min de tí</div>
-        <img id="r-story-img" src=${data[0].img}>
-        <div id="r-title">${data[0].title.toUpperCase()}</div>
+        <div id="r-button">A ${data[indice].time} min de tí</div>
+        <img id="r-story-img" src=${data[indice].img}>
+        <div id="r-title">${data[indice].title.toUpperCase()}</div>
+        <img id="r-right-arrow" src="./img/arrowright.png">
+        <img id="r-left-arrow" src="./img/arrowleft.png">
         <div id="r-info">
         <div id="r-address"><img id="r-location-minimarker" src="./img/minimarker2.png">DIRECCIÓN</div>
-        <div id="r-genre">${data[0].genre}</div>
-        <div id="r-duration"><img src="./img/clock2.png" id="r-location-minimarker">${data[0].duration}</div>
-        <div id="r-summary">${data[0].summary}</div>
+        <div id="r-genre">${data[indice].genre}</div>
+        <div id="r-duration"><img src="./img/clock2.png" id="r-location-minimarker">${data[indice].duration}</div>
+        <div id="r-summary">${data[indice].summary}</div>
         </div>
         `
+        document.getElementById("r-right-arrow").addEventListener("click", () => {
+            if (data.length === indice+1) {
+                return;
+            } else {
+                map.removeObject(marker)
+                getMeAStory(indice+1)
+            }
+        })
+
+        document.getElementById("r-left-arrow").addEventListener("click", () => {
+            if (indice === 0) {
+                return;
+            } else {
+                map.removeObject(marker)
+                getMeAStory(indice-1)
+            }
+        })
     })
     .catch(error => {
         console.log(error)
         alert('Para que esta aplicación funcione correctamente necesitamos acceso a tu gelocalización')
     })
+}
+
+getMeAStory(0);
