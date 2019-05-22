@@ -15,6 +15,12 @@ const platform = new H.service.Platform({
     'app_code': 'x5U_rooRVBrH10t0UyX4Sw'
 });
 
+document.getElementById("r-root").innerHTML = `
+<div id="r-nav-bar">HISTORIAS</div>
+<div id="r-here-map"></div>
+<div id="r-story"></div>
+`
+
 // Obtain the default map types from the platform object:
 let defaultLayers = platform.createDefaultLayers();
 let map;
