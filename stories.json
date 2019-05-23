@@ -83,7 +83,7 @@
         "b": {
             "title": "El Angel",
             "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
-            "img": "img/elAngel.png",
+            "img": "img/imagen2.png",
             "duration": "10 - 20 min",
             "genre": "Fantasía",
             "startCoordinates": {
@@ -163,7 +163,7 @@
         "c": {
             "title": "El Angel",
             "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
-            "img": "img/elAngel.png",
+            "img": "img/imagen3.png",
             "duration": "10 - 20 min",
             "genre": "Fantasía",
             "startCoordinates": {
