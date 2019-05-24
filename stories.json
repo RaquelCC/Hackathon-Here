@@ -1,11 +1,13 @@
 {
     "stories": {
         "a": {
-            "title": "El Angel",
+            "title": "El Mejor Amigo",
             "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
             "img": "img/elAngel.png",
             "duration": "10 - 20 min",
-            "genre": "Fantasía",
+            "genre": "Suspenso",
+            "inclusive": true,
+            "address": "",
             "startCoordinates": {
                 "lat": "-33.44384",
                 "lng": "-70.60357119999999"
@@ -14,11 +16,13 @@
                 "ch1": {
                     "numero": 1,
                     "title": "Capitulo 1",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.44384",
                         "lng": "-70.60357119999999"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": {
                         "choice1": {
                             "description": "Opción 1",
@@ -33,11 +37,13 @@
                 "ch2": {
                     "numero": 2,
                     "title": "Capitulo 2",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.4392",
                         "lng": "-70.61482"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": {
                         "choice1": {
                             "description": "Opción 1",
@@ -52,11 +58,13 @@
                 "ch3": {
                     "numero": 3,
                     "title": "Capitulo 3",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.4392",
                         "lng": "-70.61482"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": {
                         "choice1": {
                             "description": "Opción 1",
@@ -71,11 +79,25 @@
                 "ch4": {
                     "numero": 4,
                     "title": "Capitulo 4",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.4371158",
                         "lng": "-70.6160477"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": false,
+                    "nextChapter": false
+                },
+                "ch5": {
+                    "numero": 5,
+                    "title": "Capitulo 5",
+                    "address": "",
+                    "startCoordinates": {
+                        "lat": "-33.4371158",
+                        "lng": "-70.6160477"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": false,
                     "nextChapter": false
                 }
             }
@@ -86,6 +108,8 @@
             "img": "img/imagen2.png",
             "duration": "10 - 20 min",
             "genre": "Fantasía",
+            "inclusive": false,
+            "address": "",
             "startCoordinates": {
                 "lat": "-33.43233",
                 "lng": "-70.60922"
@@ -94,11 +118,13 @@
                 "ch1": {
                     "numero": 1,
                     "title": "Capitulo 1",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.424646",
                         "lng": "-70.604194"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": {
                         "choice1": {
                             "description": "Opción 1",
@@ -113,11 +139,13 @@
                 "ch2": {
                     "numero": 2,
                     "title": "Capitulo 2",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.424646",
                         "lng": "-70.604194"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": {
                         "choice1": {
                             "description": "Opción 1",
@@ -132,11 +160,13 @@
                 "ch3": {
                     "numero": 3,
                     "title": "Capitulo 3",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.4282796",
                         "lng": "-70.6011522"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": {
                         "choice1": {
                             "description": "Opción 1",
@@ -151,11 +181,25 @@
                 "ch4": {
                     "numero": 4,
                     "title": "Capitulo 4",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.43431",
                         "lng": "-70.60085"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": false,
+                    "nextChapter": false
+                },
+                "ch5": {
+                    "numero": 5,
+                    "title": "Capitulo 5",
+                    "address": "",
+                    "startCoordinates": {
+                        "lat": "-33.4371158",
+                        "lng": "-70.6160477"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": false
                 }
             }
@@ -166,6 +210,8 @@
             "img": "img/imagen3.png",
             "duration": "10 - 20 min",
             "genre": "Fantasía",
+            "inclusive": true,
+            "address": "",
             "startCoordinates": {
                 "lat": "-33.41915",
                 "lng": "-70.6418"
@@ -174,11 +220,13 @@
                 "ch1": {
                     "numero": 1,
                     "title": "Capitulo 1",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.424646",
                         "lng": "-70.604194"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": {
                         "choice1": {
                             "description": "Opción 1",
@@ -193,11 +241,13 @@
                 "ch2": {
                     "numero": 2,
                     "title": "Capitulo 2",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.424646",
                         "lng": "-70.604194"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": {
                         "choice1": {
                             "description": "Opción 1",
@@ -212,11 +262,13 @@
                 "ch3": {
                     "numero": 3,
                     "title": "Capitulo 3",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.4282796",
                         "lng": "-70.6011522"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": "¿Qué haces?",
                     "nextChapter": {
                         "choice1": {
                             "description": "Opción 1",
@@ -231,11 +283,25 @@
                 "ch4": {
                     "numero": 4,
                     "title": "Capitulo 4",
+                    "address": "",
                     "startCoordinates": {
                         "lat": "-33.43431",
                         "lng": "-70.60085"
                     },
                     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": false,
+                    "nextChapter": false
+                },
+                "ch5": {
+                    "numero": 5,
+                    "title": "Capitulo 5",
+                    "address": "",
+                    "startCoordinates": {
+                        "lat": "-33.4371158",
+                        "lng": "-70.6160477"
+                    },
+                    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam finibus sapien non risus lacinia, eget interdum enim iaculis. Pellentesque faucibus, risus at mattis hendrerit, ipsum risus pretium lorem, placerat convallis massa ligula ac metus. Aliquam ullamcorper est quis imperdiet rhoncus. Nunc et erat vel sem cursus malesuada. Maecenas iaculis justo felis, quis suscipit velit venenatis ac. Integer bibendum vulputate nulla eu molestie. Sed finibus faucibus mollis. Nunc eget libero ut magna convallis maximus vel quis arcu. In laoreet risus sed est mollis placerat. Phasellus consectetur vitae mi tristique ultrices. Aliquam malesuada dolor ante, non laoreet diam faucibus a.",
+                    "question": false,
                     "nextChapter": false
                 }
             }
