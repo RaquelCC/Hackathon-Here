@@ -216,6 +216,84 @@ function getMeAStory(indice, first = false) {
             if (marker && !first) {
                 map.removeObject(marker)
             }
+            //probando funcion ruta
+            // console.log(userLocMarker.b)
+            var routingParameters = {
+                // The routing mode:
+                'mode': 'fastest;car',
+                // The start point of the route:
+                'waypoint0': 'geo!'+userLocMarker.b.lat+','+userLocMarker.b.lng,
+                // The end point of the route:
+                'waypoint1': 'geo!'+data[indice].startCoordinates.lat+','+data[indice].startCoordinates.lng,
+                // To retrieve the shape of the route we choose the route
+                // representation mode 'display'
+                'representation': 'display'
+              };
+              
+              // Define a callback function to process the routing response:
+              var onResult = function(result) {
+                var route,
+                  routeShape,
+                  startPoint,
+                  endPoint,
+                  linestring;
+                if(result.response.route) {
+                // Pick the first route from the response:
+                route = result.response.route[0];
+                // Pick the route's shape:
+                routeShape = route.shape;
+              
+                // Create a linestring to use as a point source for the route line
+                linestring = new H.geo.LineString();
+              
+                // Push all the points in the shape into the linestring:
+                routeShape.forEach(function(point) {
+                  var parts = point.split(',');
+                  linestring.pushLatLngAlt(parts[0], parts[1]);
+                });
+              
+                // Retrieve the mapped positions of the requested waypoints:
+                startPoint = route.waypoint[0].mappedPosition;
+                endPoint = route.waypoint[1].mappedPosition;
+              
+                // Create a polyline to display the route:
+                var routeLine = new H.map.Polyline(linestring, {
+                  style: { strokeColor: '#3AA2EE', lineWidth: 6 }
+                });
+              
+                // Create a marker for the start point:
+                var startMarker = new H.map.Marker({
+                  lat: startPoint.latitude,
+                  lng: startPoint.longitude
+                });
+              
+                // Create a marker for the end point:
+                var endMarker = new H.map.Marker({
+                  lat: endPoint.latitude,
+                  lng: endPoint.longitude
+                });
+              
+                // Add the route polyline and the two markers to the map:
+                map.addObjects([routeLine/*, startMarker, endMarker*/]);
+              
+                // Set the map's viewport to make the whole route visible:
+                // map.setViewBounds(routeLine.getBounds());
+                }
+              };
+              
+              // Get an instance of the routing service:
+              var router = platform.getRoutingService();
+              
+              // Call calculateRoute() with the routing parameters,
+              // the callback and an error callback function (called if a
+              // communication error occurs):
+              router.calculateRoute(routingParameters, onResult,
+                function(error) {
+                  alert(error.message);
+                });
+              
+
+            //final probando funcion ruta
             marker = new H.map.Marker({ lat: data[indice].startCoordinates.lat, lng: data[indice].startCoordinates.lng }, { icon: icon });
             map.addObject(marker);
             document.getElementById("r-story").innerHTML = `
@@ -226,7 +304,7 @@ function getMeAStory(indice, first = false) {
             <img id="r-right-arrow" src="./img/arrow-right2.png">
             <img id="r-left-arrow" src="./img/arrow-left2.png">
             <div id="r-info">
-            <div id="r-address"><img class="r-location-minimarker" src="./img/minimarker2.png">DIRECCIÓN</div>
+            <div id="r-address"><img class="r-location-minimarker" src="./img/minimarker2.png">${data[indice].address ? data[indice].address : "DIRECCIÓN"}</div>
             <div id="r-genre">${data[indice].genre}</div>
             <div id="r-duration"><img src="./img/clock2.png" class="r-location-minimarker">${data[indice].duration}</div>
             ${inclusive}
@@ -358,34 +436,34 @@ function showChapter(story, chapter) {
         <div id="r-center"><p id="r-p-center">FIN</p></div>
         <div class="a-button" id="r-finish">FINALIZAR</div>`
     }
-
-    document.getElementById("r-story").innerHTML = `
-    
+    if (chapter.numero === 1) {
+        document.getElementById("r-story").innerHTML = `
     <img id="a-cap-img" src=${story.img}>
-    <div class="r-title-gradient" id="r-subir"></div>
+    <div class="r-title-gradient" id="r-subir"><div class="center-p">"${story.title.toUpperCase()}"</div></div>
     <div id="a-info">
-    <div id="a-content">En la siguiente historia tomarás el papel del personaje principal. Las referencias a lugares, como por ejemplo “tu hogar”, son ubicaciones que se relacionan al personaje.</div>
+    <div id="r-warning">ADVERTENCIA</div>
+    <div id="a-content"><p class="center-p2">En la siguiente historia tomarás el papel del personaje principal.</p><p class="center-p2"> Las referencias a lugares, como por ejemplo “tu hogar”, son ubicaciones que se relacionan al personaje.</p></div>
     <div class="a-button" id="r-entendido">ENTENDIDO</div>
     </div>
     `
-    document.getElementById("r-entendido").addEventListener("click", () => {
-        
-        document.getElementById("r-story").innerHTML = `
+        document.getElementById("r-entendido").addEventListener("click", () => {
+
+
+            document.getElementById("r-story").innerHTML = `
                     <img id="a-cap-img" src=${story.img}>
-                    <div class="r-title-gradient" id="r-subir"></div>
+                    <div class="r-title-gradient" id="r-subir"><div class="center-p">"${story.title.toUpperCase()}"</div></div>
                         <div id="a-info">
                         <div class="a-circulo">${chapter.numero}</div>
                         <div id="a-title-cap"> ${chapter.title} </div>
-                        <img id="a-play-stop" src=${"./img/stop.png"}>
                         <img id="a-play" src=${"./img/speaker.png"}>
                         <hr>
                         <div id="a-content">${chapter.content}</div>
-                        <div id="r-question">${chapter.question ? chapter.question: ""}</div>
+                        <div id="r-question">${chapter.question ? chapter.question : ""}</div>
                         ${nextCoices}
                         <img id="r-return" src="./img/x.png">
                     </div>
                 `
-                if (document.getElementById("r-finish")) {
+            if (document.getElementById("r-finish")) {
                 document.getElementById("r-finish").addEventListener("click", () => {
                     document.getElementById("r-root").innerHTML = `
                     <img id="prize" src="./img/premio.png">
@@ -398,16 +476,72 @@ function showChapter(story, chapter) {
                         `
                         getMeAStory(0, true)
                     })
-    
+
                 })
             }
-    
-                document.getElementById('a-play').addEventListener('click', () => {
-                    // console.log(data[indice].summary)
-                    decir(chapter.content);
-                    console.log('entre');
-                });
-    
+
+            document.getElementById('a-play').addEventListener('click', () => {
+                // console.log(data[indice].summary)
+                decir(chapter.content);
+                console.log('entre');
+            });
+
+            document.getElementById("r-return").addEventListener("click", () => {
+                document.getElementById("r-here-map").setAttribute("style", "height: 0px;");
+                map.getViewPort().resize();
+                getMeAStory(0);
+            })
+            if (chapter.nextChapter) {
+                let opciones = document.getElementsByClassName("a-button");
+                for (let i = 0; i < opciones.length; i++) {
+                    let next = opciones[i].getAttribute("next");
+                    // console.log(next)
+                    console.log(story.chapters[next])
+                    opciones[i].addEventListener("click", () => {
+                        showChapter(story, story.chapters[next])
+                    })
+                }
+            }
+
+        })
+    } else {
+        document.getElementById("r-story").innerHTML = `
+    <img id="a-cap-img" src=${story.img}>
+    <div class="r-title-gradient" id="r-subir"><div class="center-p">"${story.title.toUpperCase()}"</div></div>
+        <div id="a-info">
+        <div class="a-circulo">${chapter.numero}</div>
+        <div id="a-title-cap"> ${chapter.title} </div>
+        <img id="a-play" src=${"./img/speaker.png"}>
+        <hr>
+        <div id="a-content">${chapter.content}</div>
+        <div id="r-question">${chapter.question ? chapter.question : ""}</div>
+        ${nextCoices}
+        <img id="r-return" src="./img/x.png">
+    </div>
+`
+        if (document.getElementById("r-finish")) {
+            document.getElementById("r-finish").addEventListener("click", () => {
+                document.getElementById("r-root").innerHTML = `
+    <img id="prize" src="./img/premio.png">
+    `
+                document.getElementById("prize").addEventListener("click", () => {
+                    document.getElementById("r-root").innerHTML = `
+        <div id="r-nav-bar">SANTIAGOAVENTURA</div>
+        <div id="r-here-map"></div>
+        <div id="r-story"></div>
+        `
+                    getMeAStory(0, true)
+                })
+
+            })
+        }
+
+        document.getElementById('a-play').addEventListener('click', () => {
+            // console.log(data[indice].summary)
+            decir(chapter.content);
+            console.log('entre');
+        });
+
         document.getElementById("r-return").addEventListener("click", () => {
             document.getElementById("r-here-map").setAttribute("style", "height: 0px;");
             map.getViewPort().resize();
@@ -424,8 +558,9 @@ function showChapter(story, chapter) {
                 })
             }
         }
+    }
 
-    })
+
 
 }
 

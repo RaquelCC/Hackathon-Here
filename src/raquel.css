@@ -336,6 +336,39 @@ hr{
     top: 191px;
 }
 
+.center-p {
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 0.15em;
+    margin: auto;
+}
+
+.center-p2 {
+    font-weight: 300;
+    font-size: 18px;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#r-warning {
+    margin: auto;
+    text-align: center;
+    color: #D73674;
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 70px;
+}
+
+#r-entendido {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+}
+
 #first {
     margin: auto;
  
