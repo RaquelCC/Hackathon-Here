@@ -18,7 +18,7 @@ const platform = new H.service.Platform({
     'app_id': 'aNF8XAILH0I6wrjlttyu',
     'app_code': 'x5U_rooRVBrH10t0UyX4Sw',
     useHTTPS: true,
-    useCIT: true,
+    // useCIT: true,
 });
 
 document.getElementById("r-root").innerHTML = `
@@ -30,6 +30,8 @@ let map;
 let userLocMarker;
 let marker;
 let line;
+let stories;
+
 
 // // Obtain the default map types from the platform object:
 // let defaultLayers = platform.createDefaultLayers();
@@ -124,8 +126,8 @@ function getMeAStory(indice, first = false) {
                 let behavior = new H.mapevents.Behavior(events);
                 // eslint-disable-next-line
                 let ui = new H.ui.UI.createDefault(map, defaultLayers)
-                let icon = new H.map.Icon('img/Ellipse.png');
-                userLocMarker = new H.map.Marker(currentPosition, { icon: icon });
+                let icon3 = new H.map.Icon('img/Ellipse.png');
+                userLocMarker = new H.map.Marker(currentPosition, { icon: icon3 });
                 map.addObject(userLocMarker);
 
             }, error => {
@@ -149,7 +151,6 @@ function getMeAStory(indice, first = false) {
         }
     }
     let userLocation;
-    let stories;
     function getStories() {
         return new Promise((res, rej) => {
             firebase.database().ref("stories").on("value", snap => {
@@ -214,21 +215,23 @@ function getMeAStory(indice, first = false) {
             console.log(line)
             let inclusive = data[indice].inclusive ? '<div id="r-inclusive"><img class="r-location-minimarker" src="./img/inclusive.png">Accesible</div>' : '';
             // console.log(inclusive)
-            let icon = new H.map.Icon('img/newmarker.png');
-            console.log(marker)
-            console.log(map.getObjects())
-            if (marker && !first) {
-                map.removeObject(marker)
+            map.removeObjects(map.getObjects())
+            // console.log(marker)
+            // console.log(map.getObjects())
+            // if (marker && !first) {
+            //     console.log("este")
+            //     map.removeObject(marker)
 
-            }
-            if (line) {
-                map.removeObject(line)
-            }
+            // }
+            // if (map.getObjects().indexOf(line) !== -1) {
+            //     console.log("o este")
+            //     map.removeObject(line)
+            // }
             //probando funcion ruta
             // console.log(userLocMarker.b)
             var routingParameters = {
                 // The routing mode:
-                'mode': 'fastest;car',
+                'mode': 'fastest;pedestrian',
                 // The start point of the route:
                 'waypoint0': 'geo!'+userLocMarker.b.lat+','+userLocMarker.b.lng,
                 // The end point of the route:
@@ -271,20 +274,22 @@ function getMeAStory(indice, first = false) {
                 });
                 line = routeLine;
                 // Create a marker for the start point:
+                let icon = new H.map.Icon('./img/Ellipse.png');
+                let icon2 = new H.map.Icon('./img/newmarker.png');
                 var startMarker = new H.map.Marker({
                   lat: startPoint.latitude,
                   lng: startPoint.longitude
-                });
+                }, {icon: icon});
               
                 // Create a marker for the end point:
                 var endMarker = new H.map.Marker({
                   lat: endPoint.latitude,
                   lng: endPoint.longitude
-                });
+                }, {icon: icon2});
               
                 // Add the route polyline and the two markers to the map:
-                map.addObjects([routeLine/*, startMarker, endMarker*/]);
-              
+                map.addObjects([routeLine, startMarker, endMarker]);
+                console.log("se ejecuta primer routing")
                 // Set the map's viewport to make the whole route visible:
                 // map.setViewBounds(routeLine.getBounds());
                 }
@@ -303,8 +308,8 @@ function getMeAStory(indice, first = false) {
               
 
             //final probando funcion ruta
-            marker = new H.map.Marker({ lat: data[indice].startCoordinates.lat, lng: data[indice].startCoordinates.lng }, { icon: icon });
-            map.addObject(marker);
+            // marker = new H.map.Marker({ lat: data[indice].startCoordinates.lat, lng: data[indice].startCoordinates.lng }, { icon: icon });
+            // map.addObject(marker);
             document.getElementById("r-story").innerHTML = `
             <div id="r-initial-info">Elige una historia y comienza a caminar</div>
             <div id="r-button"><img src="./img/clockwhite.png" id="r-button-icon">A ${data[indice].time} min de tí</div>
@@ -391,14 +396,14 @@ function startStory(story) {
             let icon = new H.map.Icon('img/Ellipse.png');
             marker = new H.map.Marker(data, { icon: icon });
             map.setCenter(data);
-            map.addObject(marker)
+            // map.addObject(marker)
             document.getElementById("r-here-map").setAttribute("style", "height: 412px;");
             map.getViewPort().resize();
             document.getElementById("r-story").innerHTML = `
         <img id="r-return" src="./img/x.png">
         <div class="r-title-gradient"><p id="r-title-center">${story.title.toUpperCase()}</p></div>
         <div id="r-starting-container">
-        <div id="r-info-container"><img id="r-infomarker1" src="./img/infomarker.png">Dirígete al punto de partida para comenzar la historia<p id="r-margin-cero">Cuando llegues presiona comentar</p></div>
+        <div id="r-info-container"><img id="r-infomarker1" src="./img/infomarker.png">Dirígete al punto de partida para comenzar la historia<p id="r-margin-cero">Cuando llegues presiona comenzar</p></div>
         <img id="r-start-button" src="./img/BotonComenzar.png">
         </div>
         `;
@@ -487,7 +492,7 @@ function showChapter(story, chapter) {
                         <div id="r-here-map"></div>
                         <div id="r-story"></div>
                         `
-                        getMeAStory(0, true)
+                        getMeAStory(0, false)
                     })
 
                 })
@@ -511,7 +516,124 @@ function showChapter(story, chapter) {
                     // console.log(next)
                     console.log(story.chapters[next])
                     opciones[i].addEventListener("click", () => {
-                        showChapter(story, story.chapters[next])
+                        opciones[i].addEventListener("click", () => {
+                            document.getElementById("r-here-map").setAttribute("style", "height: 412px;");
+                            map.getViewPort().resize();
+                            let promise = new Promise((res, rej) => {
+                                navigator.geolocation.getCurrentPosition(position => {
+                                    userLocation = {
+                                        lat: position.coords.latitude,
+                                        lng: position.coords.longitude,
+                                    }
+                                    console.log("Ubicacion del usuario: " + position.coords.latitude + "," + position.coords.longitude)
+                                    res([stories, { lat: position.coords.latitude, lng: position.coords.longitude }])
+                                })
+                
+                            }, error => {
+                                rej(error)
+                            })
+                            promise
+                            .then(data => {
+                                map.removeObjects(map.getObjects());
+                                var routingParameters = {
+                                    // The routing mode:
+                                    'mode': 'fastest;pedestrian',
+                                    // The start point of the route:
+                                    'waypoint0': 'geo!'+userLocMarker.b.lat+','+userLocMarker.b.lng,
+                                    // The end point of the route:
+                                    'waypoint1': 'geo!'+story.chapters[next].startCoordinates.lat+','+story.chapters[next].startCoordinates.lng,
+                                    // To retrieve the shape of the route we choose the route
+                                    // representation mode 'display'
+                                    'representation': 'display'
+                                  };
+                                var onResult = function(result) {
+                                    var route,
+                                      routeShape,
+                                      startPoint,
+                                      endPoint,
+                                      linestring;
+                                    if(result.response.route) {
+                                    // Pick the first route from the response:
+                                    route = result.response.route[0];
+                                    // Pick the route's shape:
+                                    routeShape = route.shape;
+                                  
+                                    // Create a linestring to use as a point source for the route line
+                                    linestring = new H.geo.LineString();
+                                  
+                                    // Push all the points in the shape into the linestring:
+                                    routeShape.forEach(function(point) {
+                                      var parts = point.split(',');
+                                      linestring.pushLatLngAlt(parts[0], parts[1]);
+                                    });
+                                  
+                                    // Retrieve the mapped positions of the requested waypoints:
+                                    startPoint = route.waypoint[0].mappedPosition;
+                                    endPoint = route.waypoint[1].mappedPosition;
+                                  
+                                    // Create a polyline to display the route:
+                                    var routeLine = new H.map.Polyline(linestring, {
+                                      style: { strokeColor: '#3AA2EE', lineWidth: 6 }
+                                    });
+                                    line = routeLine;
+                                    // Create a marker for the start point:
+                                    let icon = new H.map.Icon('img/Ellipse.png');
+                                    let icon2 = new H.map.Icon('img/newmarker.png');
+        
+                                    var startMarker = new H.map.Marker({
+                                      lat: startPoint.latitude,
+                                      lng: startPoint.longitude
+                                    }, {icon: icon});
+                                  
+                                    // Create a marker for the end point:
+                                    var endMarker = new H.map.Marker({
+                                      lat: endPoint.latitude,
+                                      lng: endPoint.longitude
+                                    }, {icon: icon2});
+                                  
+                                    // Add the route polyline and the two markers to the map:
+                                    map.addObjects([routeLine, startMarker, endMarker]);
+                                    map.setCenter({
+                                        lat: startPoint.latitude,
+                                        lng: startPoint.longitude,
+                                    })
+                                  
+                                    // Set the map's viewport to make the whole route visible:
+                                    // map.setViewBounds(routeLine.getBounds());
+                                    }
+                                  };
+                                  
+                                  // Get an instance of the routing service:
+                                  var router = platform.getRoutingService();
+                                  
+                                  // Call calculateRoute() with the routing parameters,
+                                  // the callback and an error callback function (called if a
+                                  // communication error occurs):
+                                  router.calculateRoute(routingParameters, onResult,
+                                    function(error) {
+                                      alert(error.message);
+                                    });
+                                  
+                                    
+                            })
+                            .then( ()=> {
+                                document.getElementById("r-story").innerHTML = `
+                                <img id="r-return" src="./img/x.png">
+                                <div class="r-title-gradient"><p id="r-title-center">${story.chapters[next].title.toUpperCase()}</p></div>
+                                <div id="r-starting-container">
+                                <div id="r-info-container"><img id="r-infomarker1" src="./img/infomarker.png">Dirígete al siguiente punto para seguir la historia<p id="r-margin-cero">Cuando llegues presiona continuar</p></div>
+                                <img id="r-start-button" src="./img/BotonContinuar.png">
+                                </div>
+                                `;
+        
+                                document.getElementById("r-start-button").addEventListener("click", () => {
+                                    showChapter(story, story.chapters[next])
+                                })
+        
+                            })
+                            // showChapter(story, story.chapters[next])
+                        })
+                        // showChapter(story, story.chapters[next])
                     })
                 }
             }
@@ -567,7 +689,121 @@ function showChapter(story, chapter) {
                 // console.log(next)
                 console.log(story.chapters[next])
                 opciones[i].addEventListener("click", () => {
-                    showChapter(story, story.chapters[next])
+                    document.getElementById("r-here-map").setAttribute("style", "height: 412px;");
+                    map.getViewPort().resize();
+                    let promise = new Promise((res, rej) => {
+                        navigator.geolocation.getCurrentPosition(position => {
+                            userLocation = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude,
+                            }
+                            console.log("Ubicacion del usuario: " + position.coords.latitude + "," + position.coords.longitude)
+                            res([stories, { lat: position.coords.latitude, lng: position.coords.longitude }])
+                        })
+        
+                    }, error => {
+                        rej(error)
+                    })
+                    promise
+                    .then(data => {
+                        map.removeObjects(map.getObjects());
+                        var routingParameters = {
+                            // The routing mode:
+                            'mode': 'fastest;pedestrian',
+                            // The start point of the route:
+                            'waypoint0': 'geo!'+userLocMarker.b.lat+','+userLocMarker.b.lng,
+                            // The end point of the route:
+                            'waypoint1': 'geo!'+story.chapters[next].startCoordinates.lat+','+story.chapters[next].startCoordinates.lng,
+                            // To retrieve the shape of the route we choose the route
+                            // representation mode 'display'
+                            'representation': 'display'
+                          };
+                        var onResult = function(result) {
+                            var route,
+                              routeShape,
+                              startPoint,
+                              endPoint,
+                              linestring;
+                            if(result.response.route) {
+                            // Pick the first route from the response:
+                            route = result.response.route[0];
+                            // Pick the route's shape:
+                            routeShape = route.shape;
+                          
+                            // Create a linestring to use as a point source for the route line
+                            linestring = new H.geo.LineString();
+                          
+                            // Push all the points in the shape into the linestring:
+                            routeShape.forEach(function(point) {
+                              var parts = point.split(',');
+                              linestring.pushLatLngAlt(parts[0], parts[1]);
+                            });
+                          
+                            // Retrieve the mapped positions of the requested waypoints:
+                            startPoint = route.waypoint[0].mappedPosition;
+                            endPoint = route.waypoint[1].mappedPosition;
+                          
+                            // Create a polyline to display the route:
+                            var routeLine = new H.map.Polyline(linestring, {
+                              style: { strokeColor: '#3AA2EE', lineWidth: 6 }
+                            });
+                            line = routeLine;
+                            // Create a marker for the start point:
+                            let icon = new H.map.Icon('img/Ellipse.png');
+                            let icon2 = new H.map.Icon('img/newmarker.png');
+
+                            var startMarker = new H.map.Marker({
+                              lat: startPoint.latitude,
+                              lng: startPoint.longitude
+                            }, {icon: icon});
+                          
+                            // Create a marker for the end point:
+                            var endMarker = new H.map.Marker({
+                              lat: endPoint.latitude,
+                              lng: endPoint.longitude
+                            }, {icon: icon2});
+                          
+                            // Add the route polyline and the two markers to the map:
+                            map.addObjects([routeLine, startMarker, endMarker]);
+                            map.setCenter({
+                                lat: startPoint.latitude,
+                                lng: startPoint.longitude,
+                            })
+                          
+                            // Set the map's viewport to make the whole route visible:
+                            // map.setViewBounds(routeLine.getBounds());
+                            }
+                          };
+                          
+                          // Get an instance of the routing service:
+                          var router = platform.getRoutingService();
+                          
+                          // Call calculateRoute() with the routing parameters,
+                          // the callback and an error callback function (called if a
+                          // communication error occurs):
+                          router.calculateRoute(routingParameters, onResult,
+                            function(error) {
+                              alert(error.message);
+                            });
+                          
+                            
+                    })
+                    .then( ()=> {
+                        document.getElementById("r-story").innerHTML = `
+                        <img id="r-return" src="./img/x.png">
+                        <div class="r-title-gradient"><p id="r-title-center">${story.chapters[next].title.toUpperCase()}</p></div>
+                        <div id="r-starting-container">
+                        <div id="r-info-container"><img id="r-infomarker1" src="./img/infomarker.png">Dirígete al siguiente punto para seguir la historia<p id="r-margin-cero">Cuando llegues presiona continuar</p></div>
+                        <img id="r-start-button" src="./img/BotonContinuar.png">
+                        </div>
+                        `;
+
+                        document.getElementById("r-start-button").addEventListener("click", () => {
+                            showChapter(story, story.chapters[next])
+                        })
+
+                    })
+                    // showChapter(story, story.chapters[next])
                 })
             }
         }
