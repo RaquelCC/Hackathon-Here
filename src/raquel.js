@@ -18,6 +18,7 @@ const platform = new H.service.Platform({
     'app_id': 'aNF8XAILH0I6wrjlttyu',
     'app_code': 'x5U_rooRVBrH10t0UyX4Sw',
     useHTTPS: true,
+    useCIT: true,
 });
 
 document.getElementById("r-root").innerHTML = `
