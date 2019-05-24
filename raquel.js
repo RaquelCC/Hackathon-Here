@@ -128,7 +128,7 @@ function getMeAStory(indice, first = false) {
                 let ui = new H.ui.UI.createDefault(map, defaultLayers)
                 let icon3 = new H.map.Icon('img/Ellipse.png');
                 userLocMarker = new H.map.Marker(currentPosition, { icon: icon3 });
-                map.addObject(userLocMarker);
+                // map.addObject(userLocMarker);
 
             }, error => {
                 map = new H.Map(
