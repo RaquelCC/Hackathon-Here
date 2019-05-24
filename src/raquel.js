@@ -16,7 +16,8 @@ firebase.initializeApp(firebaseConfig);
 
 const platform = new H.service.Platform({
     'app_id': 'aNF8XAILH0I6wrjlttyu',
-    'app_code': 'x5U_rooRVBrH10t0UyX4Sw'
+    'app_code': 'x5U_rooRVBrH10t0UyX4Sw',
+    useHTTPS: true,
 });
 
 document.getElementById("r-root").innerHTML = `
@@ -27,6 +28,8 @@ document.getElementById("r-root").innerHTML = `
 let map;
 let userLocMarker;
 let marker;
+let line;
+
 // // Obtain the default map types from the platform object:
 // let defaultLayers = platform.createDefaultLayers();
 // let map;
@@ -207,7 +210,7 @@ function getMeAStory(indice, first = false) {
             })
         })
         .then(data => {
-            console.log(data)
+            console.log(line)
             let inclusive = data[indice].inclusive ? '<div id="r-inclusive"><img class="r-location-minimarker" src="./img/inclusive.png">Accesible</div>' : '';
             // console.log(inclusive)
             let icon = new H.map.Icon('img/newmarker.png');
@@ -215,6 +218,10 @@ function getMeAStory(indice, first = false) {
             console.log(map.getObjects())
             if (marker && !first) {
                 map.removeObject(marker)
+
+            }
+            if (line) {
+                map.removeObject(line)
             }
             //probando funcion ruta
             // console.log(userLocMarker.b)
@@ -231,6 +238,7 @@ function getMeAStory(indice, first = false) {
               };
               
               // Define a callback function to process the routing response:
+
               var onResult = function(result) {
                 var route,
                   routeShape,
@@ -260,7 +268,7 @@ function getMeAStory(indice, first = false) {
                 var routeLine = new H.map.Polyline(linestring, {
                   style: { strokeColor: '#3AA2EE', lineWidth: 6 }
                 });
-              
+                line = routeLine;
                 // Create a marker for the start point:
                 var startMarker = new H.map.Marker({
                   lat: startPoint.latitude,
@@ -343,6 +351,10 @@ function getMeAStory(indice, first = false) {
             })
 
             document.getElementById("r-story-img").addEventListener("click", () => {
+                console.log("story img")
+                startStory(data[indice])
+            })
+            document.getElementById("first").addEventListener("click", () => {
                 console.log("story img")
                 startStory(data[indice])
             })
@@ -571,7 +583,7 @@ function initialPage() {
     document.getElementById("r-story").innerHTML = `
     <div id="r-toclick">
     <img id="r-initial-logo" src="./img/Logo.png">
-    <div id="r-initial-name">SANTIAGOVENTURA</div>
+    <div id="r-initial-name">SANTIAGOAVENTURA</div>
     <img id="r-initial-bottom-img" src="./img/siluetaciudad.png">
     </div>
     `
